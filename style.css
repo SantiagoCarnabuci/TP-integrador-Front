@@ -1,0 +1,226 @@
+/* Estilos generales */
+:root{
+    --backgroundcolorheader: #353a40;
+    --backgroundcolormain:#ffffff;
+    --fontlink: #2aa443;
+    --fontmain:#21242a;
+    --fonttxt: #ffffff;
+    --fonttxtheader:#5e5c57;
+    --buttom:#28a343;
+    --backgroundbuttom:#96c93e;
+    --backgroundfooter:#1d3947;
+    --backgroundfootergradient:#205372;
+    --backgroundJS:#fec107;
+    --backgroundReact:#16a3b7;
+    --backgroundNegocios:#6c757d;
+    --backgroundStarups:#dc3546;
+
+
+    --fontfamily:'Roboto', sans-serif;
+    --txtgrande:1.5rem;
+    --bodyfontsize: 0.875rem;
+    --font-size-small: 1rem;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family:var(--fontfamily);
+}
+
+/* Estilos para el header */
+.container {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.header {
+    background-color:var(--backgroundcolorheader);
+    color:var(--fonttxt) ;
+    padding: 10px 0;
+}
+.logo img {
+    width: 5rem;
+    display: flex;
+}
+.charla-title {
+    margin: 0;
+    font-size: var(--bodyfontsize);
+    display: flex;
+    justify-self: flex-start;
+}
+.nav-links{
+    display: flex;
+    flex-direction: row;
+}
+.nav-links a {
+    color: var(--fonttxtheader);
+    display: flex;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+.nav-links a:hover{
+    color: var(--fonttxt);
+}
+.buy-tickets {
+    color: var(--fontlink);
+    padding: 10px 20px;
+    text-decoration: none;
+    display: flex;
+}
+.buy-tickets:hover {
+    background-color:var(--buttom);
+    color: var(--fonttxt);
+    border-radius: 10px;
+}
+.background-foto{
+    background-image: url(img/ba1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 30rem;
+    display: flex;
+
+}
+.section1-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;  
+    background-color: rgba(35, 30, 40, 0.6);
+    text-align: end;
+    padding-right: 5rem;
+    
+}
+/*Estilos para la seccion 1*/
+/* Estilos para el contenido de texto */
+.text-titulo-S1 {
+    margin-bottom: 1rem;
+    font-size: var(--txtgrande);
+    color: var(--fonttxt);
+    
+}
+#text-content{
+    color: var(--fonttxt);
+    font-size: var(--font-size-small);
+    max-width: 33rem;
+    margin-bottom: 1rem;
+}
+/*Estilos de botones*/
+.btn-section1{
+    border: 1px solid var(--fonttxt);
+    border-radius: 5px;
+    color: var(--fonttxt);
+    text-decoration: none;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+}
+.btn-section1:hover{
+    background-color: var(--buttom);
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    color: var(--fonttxt);
+    padding: 0.5rem; 
+}
+
+/* Estilos para la sección2 */
+.section2 {
+    background-color:var(--backgroundcolormain);
+}
+
+/* Estilos para el título */
+.text-titulo-S2 {
+    color: var(--fontmain);
+    text-align: center;
+    margin-bottom: 30px;
+}
+.text-titulo-S2 p{
+    font-size: var(--bodyfontsize);
+}
+.text-titulo-S2 h2{
+    font-size: var(--txtgrande);
+    letter-spacing: 1px;
+}
+
+
+/* Estilos para las tarjetas de presentación */
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+      
+}
+
+.card {
+    width: 25%; /* Tres tarjetas en una fila */
+    margin-bottom: 20px;
+    margin-right: 2rem;
+    background-color: var(--backgroundcolormain);
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    max-height: 100%;
+}
+
+.info {
+    padding: 10px;
+}
+.box-speciality{
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    width: 90%;
+}
+.box-Java {
+    background-color: var(--backgroundJS);
+    color: var(--fontmain);
+    border-radius: 3px;
+    width: 30%;
+    margin-right: 0.5rem;
+    padding: 2px;
+}
+.box-React {
+    background-color: var(--backgroundReact);
+    color: var(--fonttxt);
+    border-radius: 3px;
+    width: 30%;
+    
+}
+.box-Negocios{
+    background-color: var(--backgroundNegocios);
+    color: var(--fonttxt);
+    border-radius: 3px;
+    width: 30%;
+    margin-right: 0.5rem;
+}
+.box-Startups{
+    background-color: var(--backgroundStarups);
+    color: var(--fonttxt);
+    border-radius: 3px;
+    width: 30%;
+}
+.description {
+    margin-top: 10px;
+}
+
+
+
+@media (max-width:600px) {
+    .nav-links{
+        display: none;
+    }
+}
