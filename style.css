@@ -6,6 +6,7 @@
     --fontmain:#21242a;
     --fonttxt: #ffffff;
     --fonttxtheader:#5e5c57;
+    --fontfooter:#9babb1;
     --buttom:#28a343;
     --backgroundbuttom:#96c93e;
     --backgroundfooter:#1d3947;
@@ -19,7 +20,8 @@
     --fontfamily:'Roboto', sans-serif;
     --txtgrande:1.5rem;
     --bodyfontsize: 0.875rem;
-    --font-size-small: 1rem;
+    --fontsizesmall: 1rem;
+
 
 }
 *{
@@ -34,7 +36,7 @@ body {
 }
 
 /* Estilos para el header */
-.container {
+.container-header {
     width: 90%;
     height: 80%;
     display: flex;
@@ -47,16 +49,19 @@ body {
     color:var(--fonttxt) ;
     padding: 10px 0;
 }
+/*Imagen del header*/
 .logo img {
     width: 5rem;
     display: flex;
 }
+/*titulo*/
 .charla-title {
     margin: 0;
     font-size: var(--bodyfontsize);
     display: flex;
     justify-self: flex-start;
 }
+/*Barra de enlaces header*/
 .nav-links{
     display: flex;
     flex-direction: row;
@@ -65,11 +70,13 @@ body {
     color: var(--fonttxtheader);
     display: flex;
     text-decoration: none;
-    margin-right: 1rem;
+    margin-right: 1rem;  
 }
 .nav-links a:hover{
     color: var(--fonttxt);
+    font-weight: bold;
 }
+/*boton de compra y efecto*/
 .buy-tickets {
     color: var(--fontlink);
     padding: 10px 20px;
@@ -81,6 +88,7 @@ body {
     color: var(--fonttxt);
     border-radius: 10px;
 }
+/*Estilos para la seccion 1*/
 .background-foto{
     background-image: url(img/ba1.jpg);
     background-size: cover;
@@ -100,17 +108,17 @@ body {
     padding-right: 5rem;
     
 }
-/*Estilos para la seccion 1*/
 /* Estilos para el contenido de texto */
 .text-titulo-S1 {
     margin-bottom: 1rem;
     font-size: var(--txtgrande);
     color: var(--fonttxt);
+    letter-spacing: 1px3;
     
 }
 #text-content{
     color: var(--fonttxt);
-    font-size: var(--font-size-small);
+    font-size: var(--fontsizesmall);
     max-width: 33rem;
     margin-bottom: 1rem;
 }
@@ -132,7 +140,7 @@ body {
     padding: 0.5rem; 
 }
 
-/* Estilos para la sección2 */
+/* Estilos para la sección 2 */
 .section2 {
     background-color:var(--backgroundcolormain);
 }
@@ -141,7 +149,8 @@ body {
 .text-titulo-S2 {
     color: var(--fontmain);
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 .text-titulo-S2 p{
     font-size: var(--bodyfontsize);
@@ -150,8 +159,6 @@ body {
     font-size: var(--txtgrande);
     letter-spacing: 1px;
 }
-
-
 /* Estilos para las tarjetas de presentación */
 .card-container {
     display: flex;
@@ -159,7 +166,6 @@ body {
     flex-wrap: wrap;
       
 }
-
 .card {
     width: 25%; /* Tres tarjetas en una fila */
     margin-bottom: 20px;
@@ -170,57 +176,237 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     flex-direction: column;
 }
-
+/*Estilo para la foto*/
 .card img {
     width: 100%;
     max-height: 100%;
 }
-
+/*Estilo para la informacion de la tarjeta*/
 .info {
-    padding: 10px;
+    padding: 1rem ;
 }
+/*Estilos para las etiquetas*/
 .box-speciality{
     display: flex;
     text-align: center;
     flex-direction: row;
     width: 90%;
+    font-weight: bold;
+    background-clip: padding-box;
 }
 .box-Java {
     background-color: var(--backgroundJS);
+    background-clip: content-box;
     color: var(--fontmain);
-    border-radius: 3px;
-    width: 30%;
+    border-radius: 5px;
+    width: 35%;
     margin-right: 0.5rem;
     padding: 2px;
+    
 }
 .box-React {
     background-color: var(--backgroundReact);
+    background-clip: content-box;
     color: var(--fonttxt);
-    border-radius: 3px;
-    width: 30%;
+    border-radius: 5px;
+    width: 20%;
+    padding: 2px;
+ 
     
 }
 .box-Negocios{
     background-color: var(--backgroundNegocios);
+    background-clip: content-box;
     color: var(--fonttxt);
-    border-radius: 3px;
-    width: 30%;
+    border-radius: 5px;
+    width: 35%;
     margin-right: 0.5rem;
+    padding: 2px;
 }
 .box-Startups{
     background-color: var(--backgroundStarups);
+    background-clip: content-box;
     color: var(--fonttxt);
-    border-radius: 3px;
+    border-radius: 5px;
     width: 30%;
+    padding: 2px;
 }
-.description {
+/*Estilo del nombre*/
+.info h3{
+    margin-top: 0.25rem;
+    letter-spacing: 1px;
+}
+/*Estilo de la descripcion del orador*/
+.info p {
     margin-top: 10px;
+    font-size: var(--bodyfontsize);
+    line-height: 1.75;
+}
+
+/* Estilos para la sección 3*/
+.section3-content{
+    background-color:var(--backgroundcolorheader);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+/* Estilos para la imagen de la sección */
+.image-container-section3 {
+    width: 50%;
+    display: flex;
+}
+.image-container-section3 img {
+    width: 100%;
+}
+/*Estilos para el texto del lado derecho*/
+.text-container-section3 {
+    display: flex   ;
+    width: 50%;
+    padding: 1rem;
+}
+.text-content-section3 {
+    color: var(--fonttxt);
+}
+/*Estilos del titulo de la seccion*/
+.text-content-section3 h3 {
+    font-size: var(--txtgrande);  
+}
+/*texto de la seccion*/
+.text-content-section3 p {
+    margin: 20px 0;
+    font-size: var(--bodyfontsize);
+    line-height: 1.75;
+}
+/*Estilo del boton y efecto*/
+.btn-section3 {
+    border: 1px solid var(--fonttxt);
+    border-radius: 5px;
+    color: var(--fonttxt);
+    text-decoration: none;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+}
+.btn-section3:hover {
+    background-color: var(--buttom);
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    color: var(--fonttxt);
+    padding: 0.5rem; 
+}
+
+/* Estilos para la sección 4 */
+.text-titulo-S4 {
+    color: var(--fontmain);
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+.text-titulo-S4 h2{
+    font-size: var(--txtgrande);
+    letter-spacing: 1px;
+}
+.section4-content p{
+    font-size: var(--bodyfontsize);
+    text-align: center;
+}
+.text-titulo-S4 p{
+    font-size: var(--bodyfontsize);
+}
+#name-lastname{
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    width: 100%;
+}
+.form-floating{
+    width: 100%;
+}
+/* Estilos para el botón de envío */
+.submit-button{
+    background-color: var(--backgroundbuttom);
+    color: var(--backgroundcolormain);
+    width: 100%;
+    height: 50%;
+    border-radius: 5px;
+    border: none;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.form-orador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+.section4-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Estilos para el footer */
+.container-footer {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+.footer {
+    background: linear-gradient(to right, var(--backgroundfooter), var(--backgroundfootergradient)); 
+    color:var(--backgroundcolormain);
+    padding: 20px 0;
+}
+
+/* Estilos para los enlaces en el footer */
+.footer-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.footer-links li {
+    display: flex;
+    margin: 0 10px;
+}
+.footer-links a{
+    text-decoration: none;
+    color: var(--fontfooter);
+}
+.footer-links a:hover {
+    color:var(--backgroundcolormain);
+    font-weight: bold;
 }
 
 
 
-@media (max-width:600px) {
+
+@media (max-width:800px) {
     .nav-links{
         display: none;
     }
+    .card{
+        width: 100%;
+    }
+    .card-container{
+        flex-flow: row wrap;
+    }
+    .image-container-section3{
+        width: 99%;
+    }
+    .text-container-section3{
+        width: 99%;
+    }
+    .section3-content{
+        flex-flow: row wrap;
+    }
+    .form-orador{
+        display: flex;
+        flex-flow: column wrap;
+        width: 90%;
+    }
+    .section4-content{
+        padding: 10px;
+    }
+ 
 }
