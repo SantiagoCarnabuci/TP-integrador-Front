@@ -390,6 +390,7 @@ body {
     }
     .card-container{
         flex-flow: row wrap;
+        margin: 1rem;
     }
     .image-container-section3{
         width: 99%;
